@@ -7,7 +7,7 @@ siginificant one is that you do not see the URL, that was called for a specific 
 you excactly know which request you just made, it is a huge problem, if you just hit save on the WordPress block editor
 and 10-20 requests were made in the background.
 
-And if that was not bad enough, you would only see that $wpdb->query was called 200 times and that it took 10 seconds
+And if that was not bad enough, you would only see that `$wpdb->query` was called 200 times and that it took 10 seconds
 in total, but you would not see the actual queries that were made. Same for HTTP requests using `wp_remote_get()`
 
 This is where our extended XHProf tool comes in. It will log all database queries and all HTTP requests made during the
@@ -21,7 +21,7 @@ will assume that you are using ddev in the following documentation. If you are u
 contribute your documentation to the project.
 
 For monitoring HTTP Requests the toolset uses information gathering and processed by the plugin
-(Query Monitor)[https://de.wordpress.org/plugins/query-monitor/], if the plugin is not active, this information will not
+[Query Monitor](https://de.wordpress.org/plugins/query-monitor/), if the plugin is not active, this information will not
 be available.
 
 The toolset should also work without WordPress, but it will only provide information about start and end time, duration,
@@ -33,7 +33,7 @@ The installation expects that you are using a ddev project. If you are not using
 tool, but you will need to adjust the installation steps accordingly.
 
 1. install your ddev project
-2. copy these files into /.ddev/xhprof/
+2. copy these files into `/.ddev/xhprof/`
 
 ## Usage
 

@@ -1,4 +1,4 @@
-# Coding Pioneers extended XHProf Tool
+# Coding Pioneers extended XHProf Toolset
 
 ## Introduction
 
@@ -184,7 +184,9 @@ The XHProf tool was originally developed by Facebook
 
 ## License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU GENERAL PUBLIC LICENSE Version 2 - see the [LICENSE](LICENSE) file for details.
+
+It is based on the xhprof_prepend.php file included in ddev, which is licensed under the Apache License 2.0.
 
 Originally developed at Facebook, XHProf was open sourced in Mar, 2009.
 

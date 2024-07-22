@@ -3,8 +3,8 @@
 ## Introduction
 
 While XHProf is a great tool to analyze the performance of your site, it comes with some major limitations. The most
-siginificant one is that you do not see the URL, that was called for a specific request. While this is not a problem if
-you excactly know which request you just made, it is a huge problem, if you just hit save on the WordPress block editor
+significant one is that you do not see the URL, that was called for a specific request. While this is not a problem if
+you exactly know which request you just made, it is a huge problem, if you just hit save on the WordPress block editor
 and 10-20 requests were made in the background.
 
 And if that was not bad enough, you would only see that `$wpdb->query` was called 200 times and that it took 10 seconds

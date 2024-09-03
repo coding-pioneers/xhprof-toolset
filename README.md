@@ -29,7 +29,7 @@ URL and referrer. It will not provide any information about database queries or 
 
 ## Installation
 
-The installation expects that you are using a ddev project. If you are not using ddev, you can still use the XHProf
+The installation expects that you are using a [ddev](https://github.com/ddev/ddev) project. If you are not using ddev, you can still use the XHProf
 tool, but you will need to adjust the installation steps accordingly.
 
 1. install your ddev project
@@ -41,9 +41,9 @@ tool, but you will need to adjust the installation steps accordingly.
 2. If you have any other prepend file(Ninja Firewall for example) active in a .user.ini file, you must ensure this file
    require this file is included, otherwise you will not see any profiles.
 3. Open the page you want to profile, or hit save within the WordPress block editor.
-4. Open https://`yourproject`.ddev.site/xhprof/ in your browser, to get the default XHProf output.
+4. Open `https://--yourproject--.ddev.site/xhprof/` in your browser, to get the default XHProf output.
 5. To access the additional information run `ddev ssh` to connect to your ddev container and run `cd /tmp/xhprof`
-6. Inside this directory you will find our additional log files as explained below
+6. Inside this directory you will find our additional log files as explained below.
 
 ## Configuration
 
@@ -59,9 +59,17 @@ not have to patch this file.
 Between the comment "Customize these values as needed" and "That's all there is to configure", you will find all
 configurable settings.
 
-#### Env: CP_XHPROF_WPDB_MIN_QUERY_TIME / Const: WPDB_MIN_QUERY_TIME
+#### Logging Threshold
 
-Default value: `0.1` time in seconds
+##### Shell
+```sh
+export CP_XHPROF_WPDB_MIN_QUERY_TIME=0.1 # default
+```
+
+##### PHP
+```php
+define( 'WPDB_MIN_QUERY_TIME', 0.1 ); // default
+```
 
 By changing this you can set the threshold in seconds for the database queries that will be logged. If you set this to
 0, all queries will be logged. It is recommended to set this to a value between 0.1 and 0.5, to ensure you only focus on
